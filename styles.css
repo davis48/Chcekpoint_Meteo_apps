@@ -1,0 +1,173 @@
+/* Réinitialisation */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style du body avec un background dynamique par défaut */
+  body {
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    background-size: cover;
+    transition: background 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Conteneur principal */
+  .container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    color: #fff;
+  }
+  
+  /* En-tête avec titre et bannière image */
+  .header {
+    margin-bottom: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .weather-banner {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  
+  /* Titres et formulaire */
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  form {
+    margin-bottom: 1rem;
+  }
+  
+  input[type="text"] {
+    width: 70%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #0072ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Masquer les éléments avec .hidden */
+  .hidden {
+    display: none;
+  }
+  
+  /* Zone d'erreur */
+  .error {
+    color: #ff6b6b;
+    margin-top: 1rem;
+  }
+  
+  /* Spinner de chargement */
+  .loading {
+    margin: 20px auto;
+  }
+  
+  .spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Animation de fade-in */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  /* Carte principale */
+  .main-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .weather-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Grille de cartes */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card h3 {
+    margin: 0.5rem 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    input[type="text"] {
+      width: 60%;
+    }
+    .container {
+      padding: 1rem;
+      max-width: 90%;
+    }
+  }
+  
